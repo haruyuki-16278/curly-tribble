@@ -5,8 +5,9 @@
     <script src="//unpkg.com/alpinejs" defer></script>
   </head>
   <body>
-    <div x-data="{ message: 'hello, alpine.js!' }">
-      <h1 x-text="message"></h1>
+    <div x-data="{ count: 0, increment() {this.count++;}}">
+      <h1 x-text="count"></h1>
+      <button x-on:click="increment()">increment</button>
     </div>
   </body>
 </html>
